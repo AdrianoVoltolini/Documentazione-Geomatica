@@ -32,6 +32,9 @@ Step 2: Ricostruzione sparsa della nuvola di punti con colmap
    .. image:: assets/dsm/images/colmap_feature_extraction.png
 
 6. Chiudere la finestra di Feature extraction e premere Processing > Feature matching. Aumentare il numero di accoppiamenti tra le features delle immagini aumentando il parametro max_num_matches. Premere [Run].
+   
+   .. image:: assets/dsm/images/colmap_feature_matching.png
+
 7. Chiudere la finestra di Feature matching e premere Reconstruction > Start Reconstruction.
    
    .. image:: assets/dsm/images/colmap_sparse_reconstruction.png

@@ -24,6 +24,6 @@ language = 'it'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
-html_title = "PPK"
+html_title = "Geomatica"
 
 html_static_path = ['_static']
