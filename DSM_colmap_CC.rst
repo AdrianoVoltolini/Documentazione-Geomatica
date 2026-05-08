@@ -40,7 +40,7 @@ Step 2: Ricostruzione sparsa della nuvola di punti con colmap
    
    .. image:: assets/dsm/images/colmap_sparse_reconstruction.png
 
-Step 3: Ricostruzione densa con colmap
+Step 3: Ricostruzione densa della nuvola di punti con colmap
 ------------------------------------------------------------
 
 1. Premere Reconstruction > Dense reconstruction. Si aprirà una nuova finestra.
@@ -82,7 +82,7 @@ Step 5: Calcolo della distanza media tra i punti in CloudCompare
    
    .. image:: assets/dsm/images/cc_geometric_features.png
 
-3. Per ottenere la densità di superficie media, premere Edit > Scalar fields > Compute stat. params. Scegliere Weibull nella finestra 'Distribution Fitting' e premere OK.
+3. Per ottenere la densità di superficie media, premere Edit > Scalar fields > Compute stat. params. Scegliere Weibull nella finestra 'Distribution Fitting' e premere [OK].
 
    .. image:: assets/dsm/images/cc_distribution_fitting.png
 
@@ -101,7 +101,7 @@ Step 6: Creazione del raster DSM in CloudCompare
    
    * Per il parametro 'step', scegliere un valore superiore alla distanza media tra i punti, calcolata alla fine dello Step 5. Questo valore determina la grandezza dei pixel nel raster finale.
    * Per il parametro 'direction', scegliere l'asse Z.
-   * Sotto 'Empty Cells', per il parametro 'Fill with' scegliere 'kriging'.
+   * Sotto 'Empty cells', per il parametro 'Fill with' scegliere 'kriging'.
    * Lasciare gli altri parametri con il loro valore di default.
 
 2. Premere [Update grid].
@@ -115,9 +115,10 @@ Step 6: Creazione del raster DSM in CloudCompare
 Step 7: Conclusioni
 -------------------
 
-1. Salvare la nuvola di punti come .e57 oppure come .las. Il file .las può essere aperto da più programmi ma non è del tutto fedele al file originale.
+1. Salvare la nuvola di punti come .e57 oppure come .las. Il file .las può essere aperto da più programmi ma non è del tutto fedele alla nuvola originale.
 2. Aprire in QGIS il raster salvato e impostare il suo sistema di riferimento a quello utilizzato per la georeferenziazione nello Step 4, ed esportare di nuovo il raster.
- 
+
+   .. image:: assets/dsm/images/qgis_raster.png
 
 .. _sito ufficiale di colmap: https://github.com/colmap/colmap/releases
 .. _sito ufficiale di CloudCompare: https://www.cloudcompare.org/
