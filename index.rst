@@ -12,5 +12,5 @@ Documentazione Geomatica
    :caption: Contents:
 
    ppk_da_raw2go
-   DSM_colmap_CC
+   DSM_COLMAP_CC
 

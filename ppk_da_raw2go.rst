@@ -48,6 +48,8 @@ Step 2: conversione da .ubx a (.obs + .nav)
 4. Sotto 'RTCM, RCV RAW or RINEX OBS ?', premere [...] e selezionare il file .ubx prodotto da raw2go. Sotto 'RINEX OBS/NAV/GNAV/HNAV/QNAV/LNAV/CNAV/INAV/ and SBS' compariranno automaticamente i percorsi dei file che verranno creati in seguito.
 
 5. Premere [# Options...]: 
+   
+   * Scrivere l'altezza da terra del ricevitore GNSS nella prima cella di 'Antenna Delta H/E/N' (vedi immagine sotto).
 
    .. image:: assets/ppk/images/rtkconv_options.png
 
@@ -85,15 +87,20 @@ Step 4: PPK
 4. Sotto “RINEX NAV/CLK, SP3, BIA/BSX, FCB, IONEX, SBS/EMS, or RTCM” premere [...] e selezionare il file .nav creato alla fine dello Step 2. 
 
 5. Premere [# Options...]:
-
-   .. image:: assets/ppk/images/rtkpost_options.png
    
    * Premere [Load...], navigare nella cartella di RTKLIB e selezionare il file “f9p_ppk.conf”. Questo file contiene la configurazione ottimale per fare Post Processing Kinematics con il chip F9P, presente all'interno del ricevitore GNSS. 
+   * Nel tab 'Setting1', come Positioning Mode scegliere 'Static' (vedi immagine sotto)
+
+   .. image:: assets/ppk/images/rtkpost_options.png
+
+   * Nel tab 'Positions', in 'Rover', scrivere l'altezza da terra del ricevitore GNSS nell'ultima cella di 'Delta-E/N/U (m)' (vedi immagine sotto).
    
+   .. image:: assets/ppk/images/rtkpost_options_positions.png
+
    * selezionare i satelliti di interesse.
    * Premere [OK]. La finestra Options si chiuderà.
 
-6. Nella finestra di RTKPOST, premere [> Execute]. Un file con formato .pos dovrebbe essersi creato nel percorso visualizzato in basso, assieme ad altri file.
+1. Nella finestra di RTKPOST, premere [> Execute]. Un file con formato .pos dovrebbe essersi creato nel percorso visualizzato in basso, assieme ad altri file.
 
 
 Step 5: Conversione da .pos a .gpx
