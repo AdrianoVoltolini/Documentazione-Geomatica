@@ -34,6 +34,7 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
    * Scegliere 'Custom parameters' e scrivere i parametri intrinseci della camera. L'unità di misura deve essere in pixel. 
      
       Esempio: in COLMAP è stato scelto SIMPLE RADIAL come modello di camera per elaborare immagini di dimensioni 31520x13440. Sono di conseguenza necessari quattro parametri intrinseci:
+         
          1. focal length (f);
          2. principal point x (cx);
          3. principal point y (cy);
@@ -45,21 +46,27 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
       
       I parametri da scrivere dentro COLMAP saranno quindi:
          
-         1.  f = (108.123 mm) / (0.00376 mm/px) =  28756.117 px
+         1. f = (108.123 mm) / (0.00376 mm/px) = 
+
+            = 28756.117 px
 
          2. cx = (width dell'immagine / 2) + (x / pixel size) =
 
-             = (31520 px / 2) + (-0.06992 mm / (0.00376 mm/px)) =
+            = (31520 px / 2) + (-0.06992 mm / (0.00376 mm/px)) =
 
-             = 15760 px - 18.596 px = 15741.404 px
+            = 15760 px - 18.596 px =
+
+            = 15741.404 px
          
          3. cy = (height dell'immagine / 2) + (y / pixel size) = 
-            
-             = (13440 px / 2) + (-0.05048 mm / (0.00376 mm/px)) = 
 
-             = 6720 px - 13.426 px = 6706.574
+            = (13440 px / 2) + (-0.05048 mm / (0.00376 mm/px)) = 
+
+            = 6720 px - 13.426 px =
+
+            = 6706.574
          
-         4.  k ≈ 0
+         4. k ≈ 0
       
       NB: COLMAP utilizza questi parametri come valori iniziali, che verrato migliorati iterativamente durante il processo di ricostruzione sparsa. Di conseguenza non è necessario che siano perfetti.
 
