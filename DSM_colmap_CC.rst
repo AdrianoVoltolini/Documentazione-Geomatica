@@ -28,9 +28,45 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
 
 4. Premere File > Save project. Salvare il file .ini all'interno della cartella progetto e ricordarsi di salvare dopo ogni prossimo passaggio di questo step.
 
-5. Premere Processing > Feature extraction. Aumentare il numero di features da estrarre da ogni immagine aumentando il parametro sift.max_num_features (valore consigliato per la workstation: 45000). Premere [Extract].
+5. Premere Processing > Feature extraction:
    
-   .. image:: assets/dsm/images/COLMAP_feature_extraction.png
+   * Spuntare l'opzione 'Shared for all images'. In questo modo i parametri intrinseci inziali della camera saranno considerati uguali per tutte le immagini.
+   * Scegliere 'Custom parameters' e scrivere i parametri intrinseci della camera. L'unità di misura deve essere in pixel. 
+     
+      Esempio: in COLMAP è stato scelto SIMPLE RADIAL come modello di camera per elaborare immagini di dimensioni 31520x13440. Sono di conseguenza necessari quattro parametri intrinseci:
+         1. focal length (f);
+         2. principal point x (cx);
+         3. principal point y (cy);
+         4. radial distortion (k);
+   
+      Nel certificato di calibrazione della camera si leggono i seguenti valori:
+       
+       .. image:: assets/dsm/images/colmap_intrinsics.png
+      
+      I parametri da scrivere dentro COLMAP saranno quindi:
+         
+         1.  f = (108.123 mm) / (0.00376 mm/px) =  28756.117 px
+
+         2. cx = (width dell'immagine / 2) + (x / pixel size) =
+
+             = (31520 px / 2) + (-0.06992 mm / (0.00376 mm/px)) =
+
+             = 15760 px - 18.596 px = 15741.404 px
+         
+         3. cy = (height dell'immagine / 2) + (y / pixel size) = 
+            
+             = (13440 px / 2) + (-0.05048 mm / (0.00376 mm/px)) = 
+
+             = 6720 px - 13.426 px = 6706.574
+         
+         4.  k ≈ 0
+      
+      NB: COLMAP utilizza questi parametri come valori iniziali, che verrato migliorati iterativamente durante il processo di ricostruzione sparsa. Di conseguenza non è necessario che siano perfetti.
+
+      .. image:: assets/dsm/images/COLMAP_feature_extraction.png
+
+   * Aumentare il numero di features da estrarre da ogni immagine aumentando il parametro sift.max_num_features (valore consigliato per la workstation: 45000). 
+   * Premere [Extract].
 
 6. Chiudere la finestra di Feature extraction e premere Processing > Feature matching. Aumentare il numero di accoppiamenti tra le features delle immagini aumentando il parametro max_num_matches (valore consigliato per la workstation: 45000). Premere [Run].
    

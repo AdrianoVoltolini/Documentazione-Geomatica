@@ -93,11 +93,11 @@ Step 4: PPK
 
    .. image:: assets/ppk/images/rtkpost_options.png
 
+   * selezionare i satelliti di interesse.
    * Nel tab 'Positions', in 'Rover', scrivere l'altezza da terra del ricevitore GNSS nell'ultima cella di 'Delta-E/N/U (m)' (vedi immagine sotto).
    
    .. image:: assets/ppk/images/rtkpost_options_positions.png
 
-   * selezionare i satelliti di interesse.
    * Premere [OK]. La finestra Options si chiuderà.
 
 1. Nella finestra di RTKPOST, premere [> Execute]. Un file con formato .pos dovrebbe essersi creato nel percorso visualizzato in basso, assieme ad altri file.
