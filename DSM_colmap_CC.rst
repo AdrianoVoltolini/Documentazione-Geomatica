@@ -16,7 +16,7 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
 1. Estrarre la cartella compressa di COLMAP.
 2. Avviare il file batch 'COLMAP.bat'. Si aprirà una finestra del terminale e dopo qualche secondo l'interfaccia grafica di COLMAP (al primo avvio ci metterà un po\').
    
-   .. image:: assets/dsm/images/COLMAP.png
+   .. image:: assets/dsm/images/colmap.png
 
 3. Creare un nuovo progetto premendo su File > New project. Si aprirà una finestrella che ci chiederà un database e le foto stereo. 
 
@@ -24,7 +24,7 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
    * Per le immagini: premere [Select] e selezionare la sottocartella contenente le foto stereo.
    * Premere [Save].
   
-   .. image:: assets/dsm/images/COLMAP_new_project.png
+   .. image:: assets/dsm/images/colmap_new_project.png
 
 4. Premere File > Save project. Salvare il file .ini all'interno della cartella progetto e ricordarsi di salvare dopo ogni prossimo passaggio di questo step.
 
@@ -63,18 +63,18 @@ Step 2: Ricostruzione sparsa della nuvola di punti con COLMAP
       
       NB: COLMAP utilizza questi parametri come valori iniziali, che verrato migliorati iterativamente durante il processo di ricostruzione sparsa. Di conseguenza non è necessario che siano perfetti.
 
-      .. image:: assets/dsm/images/COLMAP_feature_extraction.png
+      .. image:: assets/dsm/images/colmap_feature_extraction.png
 
    * Aumentare il numero di features da estrarre da ogni immagine aumentando il parametro sift.max_num_features (valore consigliato per la workstation: 45000). 
    * Premere [Extract].
 
 6. Chiudere la finestra di Feature extraction e premere Processing > Feature matching. Aumentare il numero di accoppiamenti tra le features delle immagini aumentando il parametro max_num_matches (valore consigliato per la workstation: 45000). Premere [Run].
    
-   .. image:: assets/dsm/images/COLMAP_feature_matching.png
+   .. image:: assets/dsm/images/colmap_feature_matching.png
 
 7. Chiudere la finestra di Feature matching e premere Reconstruction > Start Reconstruction.
    
-   .. image:: assets/dsm/images/COLMAP_sparse_reconstruction.png
+   .. image:: assets/dsm/images/colmap_sparse_reconstruction.png
 
 Step 3: Ricostruzione densa della nuvola di punti con COLMAP
 ------------------------------------------------------------
@@ -83,11 +83,11 @@ Step 3: Ricostruzione densa della nuvola di punti con COLMAP
 2. Premere [Select] e selezionare la cartella progetto.
 3. Premere [Undistortion]. Si creeranno diversi nuovi file e sottocartelle all'interno della cartella progetto, tra cui la sottocartella images contenente le immagini senza distorsione della fotocamera. Finito il processo, nella finestra 'Dense reconstruction' comparirà la lista delle immagini elaborate.
    
-   .. image:: assets/dsm/images/COLMAP_dense_reconstruction.png
+   .. image:: assets/dsm/images/colmap_dense_reconstruction.png
 
 4. Premere [Options]. Nel tab Stereo, aumentare il parametro max_image_size per aumentare il numero di punti della nuvola finale (valore consigliato per la workstation: 10000). Chiudere la finestra 'Dense reconstruction options'.
    
-   .. image:: assets/dsm/images/COLMAP_options.png
+   .. image:: assets/dsm/images/colmap_options.png
 
 5. Premere [Stereo]. Questo processo è molto lento.
 
